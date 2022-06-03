@@ -15,7 +15,7 @@
 <h2>{{ $comic->title }}</h2>
 <a href="{{ route('comics.show', $comic->id) }}">Entra</a>
 <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>
-<form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+<form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
     @method('DELETE')
     @csrf
     <button type="submit">Elimina</button>
@@ -23,10 +23,9 @@
 
 @endforeach
 
-@section('delete-message')
+@endsection
 
+@section('delete-message')
 <script src="{{ asset('js/deleteMessage.js') }}"></script>
-    
 @endsection
     
-@endsection
