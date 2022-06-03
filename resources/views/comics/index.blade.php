@@ -23,5 +23,10 @@
 
 @endforeach
 
+@section('delete-message')
+
+<script src="{{ asset('js/deleteMessage.js') }}"></script>
+    
+@endsection
     
 @endsection
