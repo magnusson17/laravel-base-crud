@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if ('message')
+<div>
+    {{ session('message') }}
+</div>
+@endif
+
 <a href="{{ route('comics.create') }}">Nuovo</a>
 
 @foreach ($comics as $comic)
