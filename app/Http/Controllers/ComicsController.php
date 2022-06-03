@@ -99,6 +99,6 @@ class ComicsController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect('comics.index')->with('message', "Eliminato: $comic->title");
+        return redirect()->route('comics.index')->with('message', "Eliminato: $comic->title");
     }
 }
